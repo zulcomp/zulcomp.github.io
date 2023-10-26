@@ -1,2 +1,2 @@
 # zulcomp.github.io
-gh pages website for projects
+zulcomp altar on the web

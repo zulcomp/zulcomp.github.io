@@ -4,37 +4,29 @@ import { publish } from "gh-pages";
 import { existsSync, mkdirSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-import {copy} from 'fs-extra/esm';
+import fsExtra from fs-extra;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const baseDist = "dist";
 
 let sourceDir = join(__dirname, "src")
-console.log("sourceDir: " + destinationDir);
-let destinationDir = join(__dirname, baseDist)
+let destinationDir = join(__dirname, "dist")
 console.log("destinationDir: " + destinationDir);
 
 if (!existsSync(destinationDir)){
     mkdirSync(destinationDir, { recursive: true });
 }
-
-const filterFunc = (src, dest) => {
-    if(src.endsWith(".md")) return false;
-    else return true; 
-}
-
-copy(sourceDir, destinationDir, {filter: filterFunc}, (error) => {
+fsExtra.copy(sourceDir, destinationDir, (error) => {
     if (error) {
         throw error;
     } else {
-      console.log("copy src to dist successful!");
+      console.log("success!");
     }
 });
 
-publish(baseDist, {src: ["**/*.html", "**/*.htm", "**/*.js", "**/scripts/*"] }, err => {
+publish('dist', {src: "**/*" }, err => {
     if (err) {
         throw err;
     } else {
-      console.log("gh pages publish successful!");
+      console.log("success!");
     }
 });
