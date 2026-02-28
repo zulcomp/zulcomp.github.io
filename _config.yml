@@ -21,11 +21,11 @@
 title: zulcomp dev altar on the github
 email: zulcomp@yahoo.com
 description: >- # this means to ignore newlines until "baseurl:"
-- 👋 Hi, I’m @zulcomp
-- 👀 I’m interested in Java, C/C++, .NET, Python
-- 🌱 I’m currently interested in microservices, kubernetes and every other things 
-- 💞️ I’m looking to collaborate on open source software projects 
-- 📫 How to reach me - just email me - zulcomp@yahoo.com  
+ 👋 Hi, I’m @zulcomp
+ 👀 I’m interested in Java, C/C++, .NET, Python
+ 🌱 I’m currently interested in microservices, kubernetes and every other things 
+ 💞️ I’m looking to collaborate on open source software projects 
+ 📫 How to reach me - just email me - zulcomp@yahoo.com  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zulcomp.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  zulcomp
